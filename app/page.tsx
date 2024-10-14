@@ -33,7 +33,7 @@ export default function CreditCardForm() {
     return formatted.slice(0, 19) // Limit to 16 digits (19 characters including spaces)
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
 
     if (cardNumber !== validCardNumber) {
